@@ -82,7 +82,6 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
               className="if-marquee-track"
               style={{
                 fontFamily: "'Playfair Display', serif",
-                fontStyle: "italic",
                 fontSize: 15,
                 letterSpacing: "0.01em",
                 color: "#fff",
@@ -222,7 +221,8 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
           >
             <p
               style={{
-                fontFamily: "'Pinyon Script', serif",
+                fontFamily: "'Playfair Display', serif",
+                fontStyle: "italic",
                 fontSize: 15,
                 color: "rgba(255,255,255,0.75)",
                 margin: 0,
