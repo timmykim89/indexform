@@ -293,9 +293,15 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
             >
               <InstagramIcon size={19} />
             </a>
-            <Link href="/contact" aria-label="Contact" style={{ color: "#fff", display: "flex" }}>
+            <a
+              href="https://www.indexform.kr"
+              target="_blank"
+              rel="noopener"
+              aria-label="Website"
+              style={{ color: "#fff", display: "flex" }}
+            >
               <GlobeIcon size={19} />
-            </Link>
+            </a>
           </div>
         </div>
       </footer>
