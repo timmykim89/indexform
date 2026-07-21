@@ -156,7 +156,7 @@ export const DEFAULT_ARCHIVE: ArchiveItem[] = [1, 2, 3, 4].map((n) => {
 /* ── Contact ───────────────────────────────────────────────────── */
 
 export const CONTACT = {
-  email: "hello@indexform.kr",
+  email: "indexform01@gmail.com",
   instagram: "indexform.kr",
   instagramUrl: "https://instagram.com/indexform.kr",
   website: "www.indexform.kr",

@@ -279,7 +279,7 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
           <div className="if-footer-icons" style={{ display: "flex", gap: 18, alignItems: "center" }}>
-            <a href="mailto:hello@indexform.kr" aria-label="Email" style={{ color: "#fff", display: "flex" }}>
+            <a href="mailto:indexform01@gmail.com" aria-label="Email" style={{ color: "#fff", display: "flex" }}>
               <MailIcon size={19} />
             </a>
             <a
