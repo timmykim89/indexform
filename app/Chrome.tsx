@@ -271,7 +271,7 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
             padding: "9px 24px",
           }}
         >
-          <div className="if-footer-left" style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <div className="if-footer-left" style={{ display: "flex", alignItems: "center", gap: 14, lineHeight: 1 }}>
             <Wordmark white style={{ height: 15, width: "auto" }} />
             <span style={{ color: "rgba(255,255,255,0.45)" }}>/</span>
             <span
@@ -279,6 +279,8 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
               style={{
                 fontFamily: "'Pinyon Script', serif",
                 fontSize: 12,
+                lineHeight: 1,
+                transform: "translateY(2px)",
                 color: "#fff",
                 whiteSpace: "nowrap",
               }}
