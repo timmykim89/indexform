@@ -75,7 +75,7 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
         }}
       >
         {isHome ? (
-          <div style={{ flex: 1, overflow: "hidden", whiteSpace: "nowrap", margin: "0 18px" }}>
+          <div style={{ flex: 1, overflow: "hidden", whiteSpace: "nowrap", margin: "0 18px 0 -28px" }}>
             <div
               className="if-marquee-track"
               style={{
