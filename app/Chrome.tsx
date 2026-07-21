@@ -257,6 +257,7 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
         }}
       >
         <div
+          className="if-footer-inner"
           style={{
             display: "flex",
             alignItems: "center",
@@ -266,10 +267,11 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
             padding: "9px 24px",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <div className="if-footer-left" style={{ display: "flex", alignItems: "center", gap: 14 }}>
             <Wordmark white style={{ height: 15, width: "auto" }} />
             <span style={{ color: "rgba(255,255,255,0.45)" }}>/</span>
             <span
+              className="if-footer-tagline"
               style={{
                 fontFamily: "'Pinyon Script', serif",
                 fontSize: 12,
@@ -280,7 +282,7 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
               {TAGLINE}
             </span>
           </div>
-          <div style={{ display: "flex", gap: 18, alignItems: "center" }}>
+          <div className="if-footer-icons" style={{ display: "flex", gap: 18, alignItems: "center" }}>
             <a href="mailto:hello@indexform.kr" aria-label="Email" style={{ color: "#fff", display: "flex" }}>
               <MailIcon size={19} />
             </a>
