@@ -101,16 +101,6 @@ export default async function OfferPage() {
                 >
                   {offer.category}
                 </span>
-                <span
-                  style={{
-                    fontFamily: "'Oswald', sans-serif",
-                    fontWeight: 700,
-                    fontSize: 13,
-                    color: "#fff",
-                  }}
-                >
-                  {offer.index}
-                </span>
               </div>
               <h3
                 style={{

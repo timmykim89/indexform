@@ -81,8 +81,9 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
             <div
               className="if-marquee-track"
               style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: 15,
+                fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic",
+                fontSize: 16,
                 letterSpacing: "0.01em",
                 color: "#fff",
               }}
@@ -273,7 +274,9 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
           }}
         >
           <div className="if-footer-left" style={{ display: "flex", alignItems: "center", gap: 14, lineHeight: 1 }}>
-            <Wordmark white style={{ height: 15, width: "auto" }} />
+            <Link href="/" onClick={() => setSection("Home")} aria-label="Home" style={{ display: "flex" }}>
+              <Wordmark white style={{ height: 15, width: "auto" }} />
+            </Link>
           </div>
           <div className="if-footer-icons" style={{ display: "flex", gap: 18, alignItems: "center" }}>
             <a href="mailto:hello@indexform.kr" aria-label="Email" style={{ color: "#fff", display: "flex" }}>

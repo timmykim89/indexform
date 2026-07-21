@@ -218,8 +218,9 @@ export default function ArchiveView({ items }: { items: ArchiveItem[] }) {
             </div>
             <p
               style={{
-                fontFamily: "'SUIT', sans-serif",
-                fontSize: 15,
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: 14,
+                letterSpacing: "0.02em",
                 color: "#c8161d",
                 textAlign: "center",
                 margin: "14px 0 0",

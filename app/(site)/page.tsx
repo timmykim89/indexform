@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Wordmark } from "@/app/ui";
 
 export default function HomePage() {
@@ -15,7 +16,9 @@ export default function HomePage() {
       }}
     >
       <div style={{ marginBottom: 22 }}>
-        <Wordmark style={{ width: "min(280px,36vw)" }} />
+        <Link href="/story" aria-label="Index">
+          <Wordmark style={{ width: "min(280px,36vw)" }} />
+        </Link>
       </div>
     </section>
   );
