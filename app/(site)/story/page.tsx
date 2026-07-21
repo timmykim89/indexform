@@ -72,11 +72,11 @@ export default function IndexPage() {
               style={{
                 margin: 0,
                 fontFamily: "'SUIT', sans-serif",
-                fontWeight: 700,
-                fontSize: "clamp(11px,1vw,13.5px)",
+                fontWeight: 800,
+                fontSize: "clamp(13px,1.2vw,16px)",
                 lineHeight: 1.4,
                 letterSpacing: "0.01em",
-                color: "#efe8d8",
+                color: "#ffffff",
                 textAlign: "center",
               }}
             >
