@@ -18,7 +18,7 @@ const link: React.CSSProperties = {
   alignItems: "center",
   gap: 10,
   color: "#c8161d",
-  fontFamily: "'Cormorant Garamond', serif",
+  fontFamily: "'Playfair Display', serif",
   fontSize: 16,
 };
 
