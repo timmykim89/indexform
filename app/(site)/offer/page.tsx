@@ -153,7 +153,7 @@ export default async function OfferPage() {
                 {offer.points.map((pt, i) => (
                   <li
                     key={i}
-                    style={{ fontSize: 12.5, lineHeight: 1.55, color: "rgba(255,255,255,0.88)" }}
+                    style={{ fontSize: 12.5, fontWeight: 600, lineHeight: 1.55, color: "#ffffff" }}
                   >
                     {pt}
                   </li>
@@ -233,6 +233,21 @@ export default async function OfferPage() {
                 background: "#c8161d",
               }}
             />
+            {["16%", "50%", "84%"].map((top) => (
+              <div
+                key={top}
+                style={{
+                  position: "absolute",
+                  top,
+                  right: 0,
+                  width: 4,
+                  height: 4,
+                  transform: "translate(50%,-50%)",
+                  borderRadius: "50%",
+                  background: "#c8161d",
+                }}
+              />
+            ))}
             <svg
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
