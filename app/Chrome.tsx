@@ -36,6 +36,10 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
   // Close the drawer whenever the route changes.
   useEffect(() => {
     setMenuOpen(false);
+    // Keep the address bar showing the bare domain (indexform.kr/) on every page.
+    if (typeof window !== "undefined" && window.location.pathname !== "/") {
+      window.history.replaceState(null, "", "/");
+    }
   }, [pathname]);
 
   const currentLabel = labelFor(pathname);
