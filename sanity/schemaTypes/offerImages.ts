@@ -1,30 +1,37 @@
 import { defineField, defineType } from "sanity";
 
 export const offerImages = defineType({
-  name: "offerImages",
+  name: "offerImage",
   title: "Offer 이미지",
   type: "document",
   fields: [
     defineField({
-      name: "image1",
-      title: "01 Dessert Supply 이미지 (16:9)",
-      type: "image",
-      options: { hotspot: true },
+      name: "slot",
+      title: "Offer 번호",
+      type: "number",
+      options: {
+        list: [
+          { title: "1 — Dessert Supply", value: 1 },
+          { title: "2 — VIC Delivery", value: 2 },
+          { title: "3 — In-Store Experience", value: 3 },
+        ],
+        layout: "radio",
+      },
+      validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "image2",
-      title: "02 VIC Delivery 이미지 (16:9)",
+      name: "image",
+      title: "이미지 (16:9)",
       type: "image",
       options: { hotspot: true },
-    }),
-    defineField({
-      name: "image3",
-      title: "03 In-Store Experience 이미지 (16:9)",
-      type: "image",
-      options: { hotspot: true },
+      validation: (rule) => rule.required(),
     }),
   ],
   preview: {
-    prepare: () => ({ title: "Offer 이미지 (3장)" }),
+    select: { slot: "slot", media: "image" },
+    prepare: ({ slot, media }) => ({
+      title: `Offer ${slot ?? "?"}`,
+      media,
+    }),
   },
 });

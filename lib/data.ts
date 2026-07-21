@@ -9,7 +9,7 @@ import {
   type Offer,
 } from "./content";
 
-const OFFER_IMAGES_QUERY = `*[_type == "offerImages"][0]{ image1, image2, image3 }`;
+const OFFER_IMAGES_QUERY = `*[_type == "offerImage"]{ slot, image }`;
 
 const ARCHIVE_QUERY = `*[_type == "archive"] | order(orderIndex asc, _createdAt asc){
   _id, title, category, coverImage, brand, location, result, scope,
@@ -23,22 +23,20 @@ function imgUrl(source: unknown, w: number, h: number): string | null {
 
 /**
  * The three offers are fixed site content; only their images come from Sanity
- * (offerImages document). Falls back to the built-in placeholder images.
+ * (offerImage documents: slot 1/2/3 + image). Falls back to the built-in
+ * placeholder images for slots without an uploaded image.
  */
 export async function getOffers(): Promise<Offer[]> {
   if (!client) return DEFAULT_OFFERS;
   try {
-    const doc = await client.fetch<{
-      image1?: unknown;
-      image2?: unknown;
-      image3?: unknown;
-    } | null>(OFFER_IMAGES_QUERY);
-    if (!doc) return DEFAULT_OFFERS;
-    const imgs = [doc.image1, doc.image2, doc.image3];
-    return DEFAULT_OFFERS.map((o, i) => ({
-      ...o,
-      image: imgUrl(imgs[i], 900, 506) ?? o.image,
-    }));
+    const docs = await client.fetch<{ slot?: number; image?: unknown }[]>(
+      OFFER_IMAGES_QUERY,
+    );
+    if (!docs || docs.length === 0) return DEFAULT_OFFERS;
+    return DEFAULT_OFFERS.map((o, i) => {
+      const doc = docs.find((d) => d.slot === i + 1);
+      return { ...o, image: imgUrl(doc?.image, 900, 506) ?? o.image };
+    });
   } catch {
     return DEFAULT_OFFERS;
   }
