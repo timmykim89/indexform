@@ -41,7 +41,7 @@ export default async function OfferPage() {
           margin: "0 auto 52px",
         }}
       >
-        <span style={bracket(38)}>{"{"}</span>
+        <span className="if-quote-bracket" style={bracket(38)}>{"{"}</span>
         <p
           style={{
             fontSize: "clamp(13px,1.25vw,15px)",
@@ -54,7 +54,7 @@ export default async function OfferPage() {
         >
           {OFFER_QUOTE}
         </p>
-        <span style={bracket(38)}>{"}"}</span>
+        <span className="if-quote-bracket" style={bracket(38)}>{"}"}</span>
       </div>
 
       <div
@@ -312,7 +312,7 @@ export default async function OfferPage() {
 function bracket(size: number): React.CSSProperties {
   return {
     fontFamily: "'Playfair Display', serif",
-    fontSize: size,
+    fontSize: "clamp(30px,3.5vw,42px)",
     lineHeight: 1,
     color: "#c8161d",
     flexShrink: 0,

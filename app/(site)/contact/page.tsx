@@ -3,7 +3,7 @@ import { GlobeIcon, InstagramIcon, MailIcon, Wordmark } from "@/app/ui";
 
 const bracket: React.CSSProperties = {
   fontFamily: "'Playfair Display', serif",
-  fontSize: 52,
+  fontSize: "clamp(30px,3.5vw,42px)",
   lineHeight: 1,
   color: "#c8161d",
   flexShrink: 0,
@@ -25,7 +25,7 @@ export default function ContactPage() {
   return (
     <section
       style={{
-        minHeight: "calc(100vh - 108px)",
+        minHeight: "calc(100dvh - 108px)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

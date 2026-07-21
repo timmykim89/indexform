@@ -6,7 +6,7 @@ export default function HomePage() {
     <section
       style={{
         position: "relative",
-        height: "calc(100vh - 108px)",
+        height: "calc(100dvh - 108px)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

@@ -218,25 +218,11 @@ export default function ArchiveView({ items }: { items: ArchiveItem[] }) {
             </div>
             <p
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 11,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "#c8161d",
-                textAlign: "center",
-                margin: "14px 0 0",
-                opacity: 0.7,
-              }}
-            >
-              {it.categoryLabel}
-            </p>
-            <p
-              style={{
                 fontFamily: "'Playfair Display', serif",
                 fontSize: 17,
                 color: "#c8161d",
                 textAlign: "center",
-                margin: "4px 0 0",
+                margin: "14px 0 0",
               }}
             >
               {it.title}

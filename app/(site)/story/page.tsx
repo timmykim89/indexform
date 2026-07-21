@@ -9,7 +9,7 @@ export default function IndexPage() {
   return (
     <section
       style={{
-        minHeight: "calc(100vh - 108px)",
+        minHeight: "calc(100dvh - 108px)",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -83,6 +83,7 @@ export default function IndexPage() {
               {label}
             </p>
             {i < INDEX_STEPS.length - 1 && (
+              <>
               <div
                 className="if-index-step-chevron"
                 style={{
@@ -122,6 +123,32 @@ export default function IndexPage() {
                   />
                 </svg>
               </div>
+              <div
+                className="if-index-step-chevron-mo"
+                style={{
+                  display: "none",
+                  position: "absolute",
+                  left: 0,
+                  right: 0,
+                  bottom: -25,
+                  height: 26,
+                  zIndex: 2,
+                  pointerEvents: "none",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <svg
+                  width="12"
+                  height="24"
+                  viewBox="0 0 12 24"
+                  style={{ display: "block" }}
+                >
+                  <line x1="6" y1="0" x2="6" y2="15" stroke="#c8161d" strokeWidth="1" />
+                  <path d="M1.5 15.5 L10.5 15.5 L6 22.5 Z" fill="#c8161d" stroke="none" />
+                </svg>
+              </div>
+              </>
             )}
           </div>
         ))}
@@ -139,9 +166,10 @@ export default function IndexPage() {
         }}
       >
         <span
+          className="if-quote-bracket"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 48,
+            fontSize: "clamp(30px,3.5vw,42px)",
             lineHeight: 1,
             color: "#c8161d",
             flexShrink: 0,
@@ -165,9 +193,10 @@ export default function IndexPage() {
           {INDEX_QUOTE}
         </p>
         <span
+          className="if-quote-bracket"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 48,
+            fontSize: "clamp(30px,3.5vw,42px)",
             lineHeight: 1,
             color: "#c8161d",
             flexShrink: 0,
