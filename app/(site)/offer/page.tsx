@@ -140,7 +140,7 @@ export default async function OfferPage() {
               ) : null}
             </div>
             <div>
-              <p style={{ fontSize: 13.5, color: "#fff", margin: "0 0 10px" }}>{offer.subtitle}</p>
+              <p style={{ fontSize: 14.5, fontWeight: 800, color: "#fff", margin: "0 0 10px" }}>{offer.subtitle}</p>
               <ul
                 style={{
                   margin: 0,

@@ -29,6 +29,12 @@ body {
   font-family: "SUIT", "IF-Eulyoo", "Cormorant Garamond", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #3a2a24;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, p, li {
+  text-wrap: pretty;
 }
 
 a {
