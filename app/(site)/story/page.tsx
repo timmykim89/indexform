@@ -32,9 +32,12 @@ export default function IndexPage() {
         </h1>
         <p
           style={{
-            fontSize: "clamp(13px,1.2vw,16px)",
+            fontSize: "clamp(15px,1.5vw,20px)",
             lineHeight: 1.7,
             color: "#c8161d",
+            textDecoration: "underline",
+            textUnderlineOffset: "5px",
+            textDecorationThickness: "1px",
             margin: 0,
           }}
         >
@@ -48,7 +51,7 @@ export default function IndexPage() {
           display: "flex",
           alignItems: "stretch",
           width: "100%",
-          margin: "56px 0 64px",
+          margin: "30px 0 34px",
           background: "#c8161d",
         }}
       >
