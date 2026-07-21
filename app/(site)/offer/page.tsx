@@ -18,7 +18,7 @@ const circleStyle: React.CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
   textAlign: "center",
-  fontFamily: "'IF-Eulyoo', serif",
+  fontFamily: "'SUIT', sans-serif",
   fontWeight: 700,
   fontSize: "clamp(7.5px,0.85vw,12px)",
   lineHeight: 1.15,
@@ -125,7 +125,7 @@ export default async function OfferPage() {
             <div
               style={{
                 width: "100%",
-                aspectRatio: "16/9",
+                aspectRatio: "4/3",
                 overflow: "hidden",
                 background: "rgba(255,255,255,0.12)",
               }}
@@ -195,7 +195,7 @@ export default async function OfferPage() {
             style={{
               flex: "0 1 auto",
               minWidth: 0,
-              border: "1px solid rgba(200,22,29,0.3)",
+              border: "1px solid #c8161d",
               padding: "clamp(12px,2vw,26px) clamp(10px,1.6vw,22px)",
             }}
           >
@@ -289,7 +289,7 @@ export default async function OfferPage() {
             }}
           >
             {PROCESS_FLOW_GROUPS.map((grp) => (
-              <div key={grp.label} style={{ border: "1px solid rgba(200,22,29,0.3)", padding: "clamp(10px,1.4vw,18px) clamp(10px,1.6vw,22px)" }}>
+              <div key={grp.label} style={{ border: "1px solid #c8161d", padding: "clamp(10px,1.4vw,18px) clamp(10px,1.6vw,22px)" }}>
                 <p className="if-process-label" style={{ ...processLabel, fontSize: 15, margin: "0 0 12px" }}>
                   {grp.label}
                 </p>
@@ -311,7 +311,8 @@ export default async function OfferPage() {
 
 function bracket(size: number): React.CSSProperties {
   return {
-    fontFamily: "'Playfair Display', serif",
+    fontFamily: "'Cormorant Garamond', serif",
+    fontWeight: 300,
     fontSize: "clamp(30px,3.5vw,42px)",
     lineHeight: 1,
     color: "#c8161d",

@@ -19,7 +19,7 @@ export default function IndexPage() {
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
         <h1
           style={{
-            fontFamily: "'IF-Eulyoo', serif",
+            fontFamily: "'SUIT', sans-serif",
             fontWeight: 700,
             fontSize: "clamp(22px,3vw,32px)",
             lineHeight: 1.5,
@@ -34,7 +34,7 @@ export default function IndexPage() {
           style={{
             fontSize: "clamp(13px,1.2vw,16px)",
             lineHeight: 1.7,
-            color: "#3a2a24",
+            color: "#c8161d",
             margin: 0,
           }}
         >
@@ -71,7 +71,7 @@ export default function IndexPage() {
             <p
               style={{
                 margin: 0,
-                fontFamily: "'IF-Eulyoo', serif",
+                fontFamily: "'SUIT', sans-serif",
                 fontWeight: 700,
                 fontSize: "clamp(11px,1vw,13.5px)",
                 lineHeight: 1.4,
@@ -168,7 +168,8 @@ export default function IndexPage() {
         <span
           className="if-quote-bracket"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 300,
             fontSize: "clamp(30px,3.5vw,42px)",
             lineHeight: 1,
             color: "#c8161d",
@@ -195,7 +196,8 @@ export default function IndexPage() {
         <span
           className="if-quote-bracket"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 300,
             fontSize: "clamp(30px,3.5vw,42px)",
             lineHeight: 1,
             color: "#c8161d",

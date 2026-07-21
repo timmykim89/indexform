@@ -21,7 +21,7 @@ export const offerImages = defineType({
     }),
     defineField({
       name: "image",
-      title: "이미지 (16:9)",
+      title: "이미지 (4:3)",
       type: "image",
       options: { hotspot: true },
       validation: (rule) => rule.required(),

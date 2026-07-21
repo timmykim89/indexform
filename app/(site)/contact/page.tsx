@@ -1,8 +1,9 @@
-import { CONTACT, TAGLINE } from "@/lib/content";
-import { GlobeIcon, InstagramIcon, MailIcon, Wordmark } from "@/app/ui";
+import { CONTACT } from "@/lib/content";
+import { GlobeIcon, InstagramIcon, MailIcon } from "@/app/ui";
 
 const bracket: React.CSSProperties = {
-  fontFamily: "'Playfair Display', serif",
+  fontFamily: "'Cormorant Garamond', serif",
+  fontWeight: 300,
   fontSize: "clamp(30px,3.5vw,42px)",
   lineHeight: 1,
   color: "#c8161d",
@@ -34,19 +35,14 @@ export default function ContactPage() {
         gap: 0,
       }}
     >
-      <div style={{ background: "#c8161d", padding: "16px 32px", marginBottom: 14 }}>
-        <Wordmark white style={{ width: "min(300px,60vw)" }} />
+      <div style={{ marginBottom: 52 }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/assets/contact-lockup.png"
+          alt="IndexForm — Curated as Art Piece"
+          style={{ width: "min(380px,74vw)", height: "auto", display: "block" }}
+        />
       </div>
-      <p
-        style={{
-          fontFamily: "'Pinyon Script', serif",
-          fontSize: 17,
-          color: "#c8161d",
-          marginBottom: 52,
-        }}
-      >
-        {TAGLINE}
-      </p>
       <div
         className="if-contact-row"
         style={{ display: "flex", alignItems: "center", gap: 22, flexWrap: "wrap", justifyContent: "center" }}

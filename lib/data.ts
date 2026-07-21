@@ -35,7 +35,7 @@ export async function getOffers(): Promise<Offer[]> {
     if (!docs || docs.length === 0) return DEFAULT_OFFERS;
     return DEFAULT_OFFERS.map((o, i) => {
       const doc = docs.find((d) => d.slot === i + 1);
-      return { ...o, image: imgUrl(doc?.image, 900, 506) ?? o.image };
+      return { ...o, image: imgUrl(doc?.image, 900, 675) ?? o.image };
     });
   } catch {
     return DEFAULT_OFFERS;

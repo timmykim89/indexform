@@ -218,8 +218,8 @@ export default function ArchiveView({ items }: { items: ArchiveItem[] }) {
             </div>
             <p
               style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: 17,
+                fontFamily: "'SUIT', sans-serif",
+                fontSize: 15,
                 color: "#c8161d",
                 textAlign: "center",
                 margin: "14px 0 0",
@@ -236,9 +236,8 @@ export default function ArchiveView({ items }: { items: ArchiveItem[] }) {
 
 const infoText: React.CSSProperties = {
   margin: 0,
-  fontFamily: "'Cormorant Garamond', serif",
-  fontStyle: "italic",
-  fontSize: 17,
+  fontFamily: "'SUIT', sans-serif",
+  fontSize: 15,
   lineHeight: 1.6,
   color: "#c8161d",
 };

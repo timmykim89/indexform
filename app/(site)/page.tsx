@@ -1,4 +1,3 @@
-import { TAGLINE } from "@/lib/content";
 import { Wordmark } from "@/app/ui";
 
 export default function HomePage() {
@@ -16,19 +15,8 @@ export default function HomePage() {
       }}
     >
       <div style={{ marginBottom: 22 }}>
-        <Wordmark style={{ width: "min(560px,72vw)" }} />
+        <Wordmark style={{ width: "min(280px,36vw)" }} />
       </div>
-      <p
-        style={{
-          fontFamily: "'Pinyon Script', serif",
-          fontSize: "clamp(18px,2.2vw,25px)",
-          color: "#c8161d",
-          letterSpacing: "0.01em",
-          margin: 0,
-        }}
-      >
-        {TAGLINE}
-      </p>
     </section>
   );
 }

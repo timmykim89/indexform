@@ -79,7 +79,8 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
             <div
               className="if-marquee-track"
               style={{
-                fontFamily: "'Pinyon Script', serif",
+                fontFamily: "'Playfair Display', serif",
+                fontStyle: "italic",
                 fontSize: 15,
                 letterSpacing: "0.01em",
                 color: "#fff",
@@ -273,20 +274,6 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
         >
           <div className="if-footer-left" style={{ display: "flex", alignItems: "center", gap: 14, lineHeight: 1 }}>
             <Wordmark white style={{ height: 15, width: "auto" }} />
-            <span style={{ color: "rgba(255,255,255,0.45)" }}>/</span>
-            <span
-              className="if-footer-tagline"
-              style={{
-                fontFamily: "'Pinyon Script', serif",
-                fontSize: 12,
-                lineHeight: 1,
-                transform: "translateY(2px)",
-                color: "#fff",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {TAGLINE}
-            </span>
           </div>
           <div className="if-footer-icons" style={{ display: "flex", gap: 18, alignItems: "center" }}>
             <a href="mailto:hello@indexform.kr" aria-label="Email" style={{ color: "#fff", display: "flex" }}>
