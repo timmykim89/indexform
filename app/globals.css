@@ -246,10 +246,9 @@ a:hover {
     gap: 14px !important;
     width: auto !important;
   }
-  .if-contact-bracket,
-  .if-quote-bracket {
-    font-size: 56px !important;
-    font-weight: 400 !important;
+  .if-contact-bracket svg,
+  .if-quote-bracket svg {
+    width: 11px !important;
   }
   .if-footer-inner {
     padding: 7px 14px !important;

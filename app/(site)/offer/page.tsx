@@ -41,7 +41,11 @@ export default async function OfferPage() {
           margin: "0 auto 52px",
         }}
       >
-        <span className="if-quote-bracket" style={bracket(38)}>{"{"}</span>
+        <span className="if-quote-bracket" style={{ alignSelf: "stretch", display: "flex", flexShrink: 0 }}>
+          <svg width="14" viewBox="0 0 20 100" preserveAspectRatio="none" style={{ height: "100%", minHeight: 56, display: "block" }}>
+            <path d="M16 2 C10 2 9 8 9 16 L9 38 C9 45 7 48 3 50 C7 52 9 55 9 62 L9 84 C9 92 10 98 16 98" fill="none" stroke="#c8161d" strokeWidth="1.3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+          </svg>
+        </span>
         <p
           style={{
             fontSize: "clamp(13px,1.25vw,15px)",
@@ -54,7 +58,11 @@ export default async function OfferPage() {
         >
           {OFFER_QUOTE}
         </p>
-        <span className="if-quote-bracket" style={bracket(38)}>{"}"}</span>
+        <span className="if-quote-bracket" style={{ alignSelf: "stretch", display: "flex", flexShrink: 0 }}>
+          <svg width="14" viewBox="0 0 20 100" preserveAspectRatio="none" style={{ height: "100%", minHeight: 56, display: "block", transform: "scaleX(-1)" }}>
+            <path d="M16 2 C10 2 9 8 9 16 L9 38 C9 45 7 48 3 50 C7 52 9 55 9 62 L9 84 C9 92 10 98 16 98" fill="none" stroke="#c8161d" strokeWidth="1.3" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+          </svg>
+        </span>
       </div>
 
       <div
