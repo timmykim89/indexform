@@ -30,19 +30,21 @@ function labelFor(pathname: string): string {
 
 export default function Chrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() || "/";
-  const isHome = pathname === "/";
+  const [section, setSection] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const isHome = section === "Home";
 
   // Close the drawer whenever the route changes.
   useEffect(() => {
     setMenuOpen(false);
     // Keep the address bar showing the bare domain (indexform.kr/) on every page.
     if (typeof window !== "undefined" && window.location.pathname !== "/") {
+      setSection(labelFor(window.location.pathname));
       window.history.replaceState(null, "", "/");
     }
   }, [pathname]);
 
-  const currentLabel = labelFor(pathname);
+  const currentLabel = section;
 
   return (
     <div
@@ -189,15 +191,13 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
           </div>
           <nav style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {NAV.map((item) => {
-              const active =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href);
+              const active = item.label === section;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   className="if-navlink"
+                  onClick={() => setSection(item.label)}
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     fontStyle: item.italic ? "italic" : "normal",
