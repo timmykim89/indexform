@@ -66,7 +66,7 @@ export const archive = defineType({
     }),
     defineField({
       name: "horizontalImage",
-      title: "상세 가로 이미지 (16:9)",
+      title: "상세 가로 이미지 (7:5)",
       type: "image",
       options: { hotspot: true },
     }),

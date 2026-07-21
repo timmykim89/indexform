@@ -87,7 +87,7 @@ export default function ArchiveView({ items }: { items: ArchiveItem[] }) {
                 <ImageSlot src={detail.verticalImages[1]} placeholder="Vertical image" />
               </div>
             </div>
-            <div style={{ width: "100%", aspectRatio: "16/9" }}>
+            <div style={{ width: "100%", aspectRatio: "7/5" }}>
               <ImageSlot src={detail.horizontalImage} placeholder="Horizontal image" />
             </div>
           </div>

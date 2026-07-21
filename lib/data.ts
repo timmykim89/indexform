@@ -80,7 +80,7 @@ export async function getArchive(): Promise<ArchiveItem[]> {
           imgUrl(d.verticalImages?.[0], 600, 800),
           imgUrl(d.verticalImages?.[1], 600, 800),
         ],
-        horizontalImage: imgUrl(d.horizontalImage, 1280, 720),
+        horizontalImage: imgUrl(d.horizontalImage, 1260, 900),
       };
     });
   } catch {
