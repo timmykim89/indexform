@@ -40,7 +40,7 @@ export default function ContactPage() {
         <img
           src="/assets/contact-lockup.png"
           alt="IndexForm — Curated as Art Piece"
-          style={{ width: "min(380px,74vw)", height: "auto", display: "block" }}
+          style={{ width: "min(266px,36vw)", height: "auto", display: "block" }}
         />
       </div>
       <div
