@@ -9,9 +9,7 @@ import {
   type Offer,
 } from "./content";
 
-const OFFERS_QUERY = `*[_type == "offer"] | order(orderIndex asc){
-  orderIndex, category, title, image, subtitle, points
-}`;
+const OFFER_IMAGES_QUERY = `*[_type == "offerImages"][0]{ image1, image2, image3 }`;
 
 const ARCHIVE_QUERY = `*[_type == "archive"] | order(orderIndex asc, _createdAt asc){
   _id, title, category, coverImage, brand, location, result, scope,
@@ -24,30 +22,22 @@ function imgUrl(source: unknown, w: number, h: number): string | null {
 }
 
 /**
- * Offers from Sanity, or the design defaults when Sanity is not configured or
- * has no published offers.
+ * The three offers are fixed site content; only their images come from Sanity
+ * (offerImages document). Falls back to the built-in placeholder images.
  */
 export async function getOffers(): Promise<Offer[]> {
   if (!client) return DEFAULT_OFFERS;
   try {
-    const docs = await client.fetch<
-      {
-        orderIndex?: number;
-        category?: string;
-        title?: string;
-        image?: unknown;
-        subtitle?: string;
-        points?: string[];
-      }[]
-    >(OFFERS_QUERY);
-    if (!docs || docs.length === 0) return DEFAULT_OFFERS;
-    return docs.map((d, i) => ({
-      category: d.category ?? "",
-      index: String(d.orderIndex ?? i + 1).padStart(2, "0"),
-      title: d.title ?? "",
-      image: imgUrl(d.image, 900, 506),
-      subtitle: d.subtitle ?? "",
-      points: d.points ?? [],
+    const doc = await client.fetch<{
+      image1?: unknown;
+      image2?: unknown;
+      image3?: unknown;
+    } | null>(OFFER_IMAGES_QUERY);
+    if (!doc) return DEFAULT_OFFERS;
+    const imgs = [doc.image1, doc.image2, doc.image3];
+    return DEFAULT_OFFERS.map((o, i) => ({
+      ...o,
+      image: imgUrl(imgs[i], 900, 506) ?? o.image,
     }));
   } catch {
     return DEFAULT_OFFERS;

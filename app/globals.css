@@ -255,10 +255,10 @@ a:hover {
     min-width: 0 !important;
   }
   .if-footer-inner .if-footer-left img {
-    height: 11px !important;
+    height: 13px !important;
   }
   .if-footer-tagline {
-    font-size: 10px !important;
+    font-size: 13px !important;
   }
   .if-footer-icons {
     gap: 4px !important;
@@ -269,7 +269,7 @@ a:hover {
     margin: -12px -2px !important;
   }
   .if-footer-icons svg {
-    width: 18px !important;
-    height: 18px !important;
+    width: 21px !important;
+    height: 21px !important;
   }
 }
