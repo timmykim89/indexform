@@ -90,6 +90,12 @@ a:hover {
   .if-pc-break {
     display: inline;
   }
+  .if-process-label {
+    flex-direction: row !important;
+    align-items: baseline !important;
+    gap: 6px !important;
+    text-align: left !important;
+  }
 }
 
 .if-process-arrow-mobile {

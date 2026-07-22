@@ -197,8 +197,8 @@ export default async function OfferPage() {
               padding: "clamp(12px,2vw,26px) clamp(10px,1.6vw,22px)",
             }}
           >
-            <p className="if-process-label" style={processLabel}>
-              Dessert
+            <p className="if-process-label" style={{ ...processLabel, display: "flex", flexDirection: "row", alignItems: "baseline", gap: 6 }}>
+              <span>Dessert</span>
             </p>
             <div className="if-process-circles" style={{ display: "flex", gap: "clamp(4px,1vw,14px)" }}>
               {PROCESS_DESSERT_CIRCLES.map((c) => (
@@ -303,8 +303,9 @@ export default async function OfferPage() {
           >
             {PROCESS_FLOW_GROUPS.map((grp) => (
               <div key={grp.label} style={{ border: "1px solid #c8161d", padding: "clamp(10px,1.4vw,18px) clamp(10px,1.6vw,22px)" }}>
-                <p className="if-process-label" style={{ ...processLabel, fontSize: 15, margin: "0 0 12px" }}>
-                  {grp.label}
+                <p className="if-process-label" style={{ ...processLabel, fontSize: 15, margin: "0 0 12px", display: "flex", flexDirection: "column", alignItems: "center", gap: 0 }}>
+                  <span>{grp.label.split(" ")[0]}</span>
+                  <span className="if-process-label-line2">{grp.label.split(" ").slice(1).join(" ")}</span>
                 </p>
                 <div className="if-process-circles" style={{ display: "flex", gap: "clamp(4px,1vw,14px)" }}>
                   {grp.circles.map((gc) => (
@@ -346,3 +347,4 @@ const processLabel: React.CSSProperties = {
   textAlign: "left",
   margin: "0 0 14px",
 };
+
