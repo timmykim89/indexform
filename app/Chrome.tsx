@@ -67,17 +67,17 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
           left: 0,
           right: 0,
           zIndex: 90,
-          height: 52,
+          height: 37,
           background: "#c8161d",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 28px",
+          padding: 0,
           boxShadow: "0 1px 0 rgba(0,0,0,0.06)",
         }}
       >
         {isHome ? (
-          <div style={{ flex: 1, overflow: "hidden", whiteSpace: "nowrap", margin: "0 18px 0 -28px" }}>
+          <div style={{ flex: 1, overflow: "hidden", whiteSpace: "nowrap", marginRight: 14 }}>
             <div
               className="if-marquee-track"
               style={{
@@ -88,8 +88,8 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
                 color: "#fff",
               }}
             >
-              <span>{MARQUEE}&nbsp;&nbsp;&nbsp;&nbsp;</span>
-              <span>{MARQUEE}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span>{MARQUEE} &nbsp;·&nbsp; {MARQUEE} &nbsp;·&nbsp; {MARQUEE} &nbsp;·&nbsp; </span>
+              <span>{MARQUEE} &nbsp;·&nbsp; {MARQUEE} &nbsp;·&nbsp; {MARQUEE} &nbsp;·&nbsp; </span>
             </div>
           </div>
         ) : (
@@ -102,6 +102,7 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
               letterSpacing: "0.01em",
               color: "#fff",
               textAlign: "left",
+              paddingLeft: 28,
             }}
           >
             {currentLabel}
@@ -118,10 +119,11 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
             padding: 0,
             display: "flex",
             alignItems: "center",
-            height: 30,
+            height: 22,
+            marginRight: 28,
           }}
         >
-          <Emblem white size={30} />
+          <Emblem white size={22} />
         </button>
       </div>
 
@@ -246,7 +248,7 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
       </div>
 
       {/* MAIN */}
-      <main style={{ paddingTop: 52, paddingBottom: 56, minHeight: "100vh" }}>
+      <main style={{ paddingTop: 37, paddingBottom: 56, minHeight: "100vh" }}>
         {children}
       </main>
 

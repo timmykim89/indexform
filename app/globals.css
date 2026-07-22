@@ -62,7 +62,7 @@ a:hover {
 .if-marquee-track {
   display: inline-block;
   white-space: nowrap;
-  animation: ifMarquee 26s linear infinite;
+  animation: ifMarquee 46s linear infinite;
 }
 
 .if-card {
