@@ -201,9 +201,11 @@ a:hover {
   .if-process-label {
     text-align: center !important;
     font-size: 11px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    word-break: keep-all !important;
+    line-height: 1.3 !important;
   }
   .if-process-circles {
     justify-content: center !important;
